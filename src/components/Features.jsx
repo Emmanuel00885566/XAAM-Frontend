@@ -1,4 +1,4 @@
-import everythingBg from "../assets/images/EVERYTHINGyouneed.png";
+import everythingBg from "../assets/icons/EVERYTHINGyouneed.svg";
 import frameImage from "../assets/icons/Frame.svg";
 
 const features = [
@@ -14,25 +14,24 @@ const features = [
 
 const Features = () => {
   return (
-    <section
-      className="px-6 md:px-16 py-16 bg-cover bg-center"
-      style={{ backgroundImage: `url(${everythingBg})` }}
-    >
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
-        EVERYTHING you need to succeed
-      </h2>
+    <section className="px-6 md:px-16 py-16 bg-gray-50">
+      
+      {/* TOP IMAGE (NOT BACKGROUND!) */}
+      <div className="flex justify-center">
+        <img
+          src={everythingBg}
+          alt="Everything you need"
+          className="w-full max-w-4xl"
+        />
+      </div>
 
-      <p className="text-center text-gray-500 mt-2">
-        Powerful tools to help you learn, practice and ace your exams
-      </p>
-
-      {/* FRAME CONTAINER */}
+      {/* FRAME SECTION */}
       <div className="relative mt-10 max-w-4xl mx-auto">
         
-        {/* Background Frame */}
-        <img src={frameImage} alt="Features" className="w-full" />
+        {/* Frame */}
+        <img src={frameImage} alt="Features Frame" className="w-full" />
 
-        {/* Overlay Grid (Clickable Areas) */}
+        {/* Clickable overlay */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4">
           {features.map((item, index) => (
             <div
@@ -44,6 +43,7 @@ const Features = () => {
         </div>
 
       </div>
+
     </section>
   );
 };
