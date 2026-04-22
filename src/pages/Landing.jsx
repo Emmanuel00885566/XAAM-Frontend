@@ -1,17 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import Stats from "../components/Stats";
+import Features from "../components/Features";
 
 const Landing = () => {
-  const navigate = useNavigate();
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>XAAM</h1>
-      <p>Practice smarter. Score higher.</p>
-
-      <button onClick={() => navigate("/home")}>
-        Start Practice
-      </button>
-    </div>
+    <>
+      <Navbar />
+      <HeroSection />
+      <Stats />
+      <Features />
+    </>
   );
 };
 
